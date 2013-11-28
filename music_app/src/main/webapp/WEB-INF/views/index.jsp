@@ -11,17 +11,17 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
-		<script src="resources/js/jquery.min.js"></script>
-		<script src="resources/js/config.js"></script>
-		<script src="resources/js/skel.min.js"></script>
-		<script src="resources/js/skel-panels.min.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
 		<noscript>
-			<link rel="stylesheet" href="resources/css/skel-noscript.css" />
-			<link rel="stylesheet" href="resources/css/style.css" />
-			<link rel="stylesheet" href="resources/css/style-desktop.css" />
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
 		</noscript>
-		<!--[if lte IE 9]><link rel="stylesheet" href="resources/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><script src="resources/js/html5shiv.js"></script><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
 	</head>
 	<body>
 	<!-- ********************************************************* -->
