@@ -17,4 +17,6 @@ public interface StudentService {
 	void deleteStudent(long studentId);
 
 	public List<Student> listStudents();
+	
+	public List<Student> findByLastName(String lastName);
 }

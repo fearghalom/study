@@ -19,26 +19,35 @@ import javax.persistence.ManyToMany;
  */
 @Entity
 @DiscriminatorValue("Student")
-public class Student extends Person{
+public class Student extends Person {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1372202527668453546L;
-	
+
 	@ManyToMany
-    @JoinTable(
-        name="STUDENT_MUSICCLASS",
-        joinColumns=
-            @JoinColumn(name="STUDENT_ID", referencedColumnName="id"),
-        inverseJoinColumns=
-            @JoinColumn(name="MUSICCLASS_ID", referencedColumnName="id")
-    )
+	@JoinTable(name = "STUDENT_MUSICCLASS", joinColumns = @JoinColumn(name = "STUDENT_ID", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "MUSICCLASS_ID", referencedColumnName = "id"))
 	private List<MusicClass> classes;
 
-	@ElementCollection(targetClass=Instrument.class)
+	@ElementCollection(targetClass = Instrument.class)
 	@Enumerated
 	private List<Instrument> instruments;
-	
-	
+
+	public List<MusicClass> getClasses() {
+		return classes;
+	}
+
+	public void setClasses(List<MusicClass> classes) {
+		this.classes = classes;
+	}
+
+	public List<Instrument> getInstruments() {
+		return instruments;
+	}
+
+	public void setInstruments(List<Instrument> instruments) {
+		this.instruments = instruments;
+	}
+
 }

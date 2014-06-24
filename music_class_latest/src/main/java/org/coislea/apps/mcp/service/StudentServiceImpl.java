@@ -8,7 +8,6 @@ import java.util.List;
 import javax.inject.Inject;
 
 import org.coislea.apps.mcp.model.Student;
-import org.coislea.apps.mcp.repository.AddressRepository;
 import org.coislea.apps.mcp.repository.StudentRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -36,6 +35,16 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public List<Student> listStudents() {
-		return studentRepository.findAll();
+		List<Student> students = studentRepository.findAll();
+		students.forEach(s -> s.getInstruments().size());
+		return students;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public List<Student> findByLastName(String lastName) {
+		return studentRepository.findByLastName(lastName);
 	}
 }

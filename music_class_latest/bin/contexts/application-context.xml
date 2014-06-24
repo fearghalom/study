@@ -15,21 +15,24 @@
 	<context:component-scan
 		base-package="org.coislea.apps.mcp.service" />
 
+<context:component-scan
+		base-package="org.coislea.apps.mcp.model" />
+		
 	<jpa:repositories base-package="org.coislea.apps.mcp.repository" />
-	
+
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-		<property name="persistenceXmlLocation" value="classpath:jpa/persistence.xml" />
 		<property name="persistenceUnitName" value="personPersistenceUnit" />
 		<property name="dataSource" ref="dataSource" />
 		<property name="jpaVendorAdapter" ref="jpaVendorAdapter" />
 		<property name="jpaDialect" ref="jpaDialect" />
+		<property name="packagesToScan" value="org.coislea.apps.mcp.model" />
 		<property name="jpaProperties">
-        <props>
-            <prop key="hibernate.hbm2ddl.auto">create-drop</prop>
-            <prop key="hibernate.show_sql">true</prop>
-        </props>
-    </property>
+			<props>
+				<prop key="hibernate.hbm2ddl.auto">create-drop</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
 	</bean>
 	
 	<bean id="jpaVendorAdapter"

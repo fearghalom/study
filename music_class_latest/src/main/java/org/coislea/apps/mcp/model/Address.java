@@ -16,11 +16,22 @@ import javax.persistence.OneToOne;
 @Entity
 public class Address {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String id;
 
 	@OneToOne(mappedBy = "address")
 	private Person person;
+
+	private String line1;
+
+	private String line2;
+
+	private String line3;
+
+	private String town;
+
+	private String county;
+
 	/**
 	 * @return the person
 	 */
@@ -35,12 +46,6 @@ public class Address {
 		this.person = person;
 	}
 
-	private String line1;
-	private String line2;
-	private String line3;
-	private String town;
-	private String county;
-
 	/**
 	 * @return the line1
 	 */
@@ -49,8 +54,7 @@ public class Address {
 	}
 
 	/**
-	 * @param line1
-	 *            the line1 to set
+	 * @param line1 the line1 to set
 	 */
 	public void setLine1(String line1) {
 		this.line1 = line1;
@@ -64,8 +68,7 @@ public class Address {
 	}
 
 	/**
-	 * @param line2
-	 *            the line2 to set
+	 * @param line2 the line2 to set
 	 */
 	public void setLine2(String line2) {
 		this.line2 = line2;
@@ -79,8 +82,7 @@ public class Address {
 	}
 
 	/**
-	 * @param line3
-	 *            the line3 to set
+	 * @param line3 the line3 to set
 	 */
 	public void setLine3(String line3) {
 		this.line3 = line3;
@@ -94,8 +96,7 @@ public class Address {
 	}
 
 	/**
-	 * @param town
-	 *            the town to set
+	 * @param town the town to set
 	 */
 	public void setTown(String town) {
 		this.town = town;
@@ -109,8 +110,7 @@ public class Address {
 	}
 
 	/**
-	 * @param county
-	 *            the county to set
+	 * @param county the county to set
 	 */
 	public void setCounty(String county) {
 		this.county = county;
